@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>    
+</head>
+<body class="bg-info">
+    <div class="container">
+
+        <div style="background-color: black; color: #008F11; border-radius: 5px; margin-bottom: 5px; text-align: center; height: 30px;" class="row justify-content-center align-self-center">
+            
+            <div class="col-md-12">
+                <p id="log">Welcome</p>
+            </div>
+
+        </div>
+
+        <div style="border:1px solid black;padding: 1cm;border-radius: 10px; margin-bottom: 5px; background-color: whitesmoke" class="row">
+
+            <div class="col-md-4">
+                <label>Select an account to use it</label>
+                <select class="form-control" id="account-selector" size=6></select> 
+            </div>
+
+            <div class="col-md-4">
+                <h4>Balance: <span id="balance">0</span></h4>
+                <hr>
+                <button id="create-contract-button" type="button" class="btn btn-primary btn-block">Create contract</button>
+                <hr>
+                <input id="existing-contract-address"class="form-control" type="text" placeholder="Contract address">
+                <button id="existing-contract-add" class="btn btn-secondary btn-block">Add existing contract</button>
+                
+            </div>
+
+            <div class="col-md-4">
+                <label>Available contracts</label>
+                <select class="form-control" id="contract-selector" size=6></select>
+            </div>
+
+        </div>
+
+        <!-- contract details -->
+        <div style="border:1px solid black;padding: 1cm;border-radius: 10px; margin-bottom: 5px; background-color: whitesmoke" class="row">
+            <div class="col-md-4">
+                <label>Manager:</label>
+                <input id="manager-address" class="form-control" value="" disabled>
+
+                <label>Contract balance:</label>
+                <input id="contract-balance" class="form-control" value="" disabled>
+            </div>
+
+            <div class="col-md-4">
+                <label>Taxi driver:</label>
+                <input id="taxi-driver-address" class="form-control" value="" disabled>
+
+                <label>Car dealer:</label>
+                <input id="car-dealer-address" class="form-control" value="" disabled>
+            </div>
+
+            <div class="col-md-4">
+                <label>Owned car ID:</label>
+                <input id="car-id-input" class="form-control" value="" disabled>
+            </div>
+
+        </div>
+
+        <div style="border:1px solid black;padding: 1cm;border-radius: 10px; background-color: whitesmoke" class="row">
+            
+
+                <div class="col-md-3">
+                    <label>Users joined to this contract:</label>
+                    <select class="form-control" id="joined-account-selector" size=8></select> 
+                </div>
+
+                <div class="col-md-8">
+                    
+                </div>
+
+                <!--
+                <div class="col-md-3">
+                    <p>Account controls:</p>
+                    <button id="join-fee-btn" type="button" class="btn btn-primary btn-block">Join</button>
+                    <button id="join-all-nofee" type="button" class="btn btn-primary btn-block">Add all accounts(without paying)</button>
+                    <button id="join-all-fee" type="button" class="btn btn-primary btn-block">Add all accounts(pay fee)</button>
+                </div>
+
+                <div class="col-md-3">
+                    <p>Moneyflow: </p>
+                    <button type="button" class="btn btn-primary btn-block">(Simulate) Customer simulation (adds 20 ether)</button>
+                    <button type="button" class="btn btn-primary btn-block">(Simulate) Maintenance for 10 ether</button>
+                    <button type="button" class="btn btn-primary btn-block">(Simulate) Dividen</button>
+                </div>
+
+                <div class="col-md-3">
+                    <p>Admin: </p>
+                    <button type="button" class="btn btn-primary btn-block">(Simulate) Set user as driver</button>
+                    <button type="button" class="btn btn-primary btn-block">(Simulate) Set user as car dealer</button>
+                    <button type="button" class="btn btn-primary btn-block">(Simulate) Purchase a car for 10 ethers</button>
+                </div>
+                 -->
+        </div>
+
+    </div>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="web3.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

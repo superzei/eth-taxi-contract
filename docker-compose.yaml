@@ -1,0 +1,23 @@
+version: '3'
+services:
+  nodejs:
+    build: web3-server/
+    image: "honorlessman/ethereum-nodejs"
+    container_name: "nodejs"
+    ports:
+      - "8545:8545"
+  node-http:
+    build: http-server/
+    image: "honorlessman/ethereum-node-http"
+    container_name: "node-http"
+    ports:
+      - "8080:8080"
+    volumes:
+      - http-data:/home/node:rw
+volumes:
+  http-data:
+    driver: local
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: $PWD/http-server/node_data
